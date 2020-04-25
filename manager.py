@@ -14,7 +14,6 @@ with open("users.json", "w") as json_f:
     json.dump(json_datas,json_f,indent="    ")
 
 client = discord.Client()
-token = "NzAyMzU0MjE4OTU4NDU0ODU0.Xp-0iw.9lkYwjfOwUZyg1Zq3N6ZAqM2w1g"
 
 @client.event
 async def on_ready():
@@ -318,5 +317,5 @@ async def on_message(message):
      
 
 
-       
-client.run(token)
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
